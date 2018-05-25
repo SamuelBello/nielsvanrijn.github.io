@@ -8,37 +8,125 @@ GENERAL
     -webkit-font-smoothing: antialiased;
 }
 *:focus{outline:0}
-:root{
-    --flat-green: #B5EBE7;
-    --flat-green-2: #b5d5eb;
-    --flat-green-gradient: linear-gradient(135deg, #B5EBE7 0%, #b5d5eb 100%);
-
-    --flat-red: #FF7A76;
-    --flat-red-2: #ffe076;
-    --flat-red-gradient: linear-gradient(135deg, #FF7A76 0%, #ffe076 100%);
-
-    --flat-purple: #8188E4;
-    --flat-purple-2: #edabe0;
-    --flat-purple-gradient: linear-gradient(135deg, #8188E4 0%, #edabe0 100%);
-
-    --flat-yellow: #FDD979;
-    --flat-yellow-2: #befd79;
-    --flat-yellow-gradient: linear-gradient(135deg, #befd79 0%, #FDD979 100%);
-
-    --white: #FFFFFF;
-    --super-light-gray: #f9fafb;
-    --light-gray: #ECEFF1;
-    --gray: #D3D9DC;
-    --dark-gray: #A1AAAE;
-    --light-gray-2: #74848B;
-    --gray-2: #414A4E;
-    --dark-gray-2: #1A1D1F;
-    --black: #000000;
-}
 li{list-style: none}
 a{text-decoration: none}
 h1,h2,h3,h4,h5,h6,a,p,b,span,li{
     font-family: 'Galano Grotesque Alt', sans-serif;
+    color: #707070;
+}
+body{
+    background: #F6F7FB;
+}
+/*====================================================================
+HEADER
+====================================================================*/
+header{
+    max-width: 1366px;
+    margin: 96px auto;
+}
+header h1{
+    font-size: 50px;
+}
+header h1 span{
+    font-weight: 100;
+}
+header h6{
+    font-size: 20px;
+    font-weight: 300;
+}
+/*====================================================================
+SECTIONS
+====================================================================*/
+section{
+    max-width: 1366px;
+    margin: 58px auto;
+}
+section > span{
+    width: 100%;
+    padding: 0 0 11px 20px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: #53575A;
+}
+section > span::after{
+    content: '';
+    height: 1px;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background: #D9D9E1;
+    position: absolute;
+}
+section > div{
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+section div.item{
+    flex: 0 1;
+    margin: 45px 0;
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+    transition: .2s cubic-bezier(0,0,.2,1);
+    -webkit-transition: .2s cubic-bezier(0,0,.2,1);
+}
+section div.item:hover{
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .10);
+}
+section div.item:hover h4{
+    color: #4A8AFB;
+}
+section div.item h4{
+    padding: 20px;
+    color: #394264;
+    position: relative;
+    transition: color .2s cubic-bezier(0,0,.2,1);
+    -webkit-transition: color .2s cubic-bezier(0,0,.2,1);
+}
+section div.item h4::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 97%;
+    width: 100%;
+    height: 2px;
+    background: #F1F2F6;
+}
+section div.item > div{
+    transition: .2s cubic-bezier(0,0,.2,1);
+    -webkit-transition: .2s cubic-bezier(0,0,.2,1);
+}
+/* =============== snippets =============== */
+section.snippets div.item > div{
+    width: 280px;
+    height: 424px;
+    background-color: #4A8AFB;
+    background-image: url('../media/snippet-bg.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+    border-radius: 0 0 6px 6px;
+}
+section.snippets div.item:hover > div{
+    width: 300px;
+}
+/* =============== desktop =============== */
+section.desktop div.item > div{
+    width: 394px;
+    height: 290px;
+    background-color: #4A8AFB;
+    background-image: url('../media/desktop-bg.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+    border-radius: 0 0 6px 6px;
+}
+section.desktop div.item:hover > div{
+    width: 400px;
 }
 /*====================================================================
 FOOTER
@@ -47,7 +135,7 @@ footer{
     width: 100%;
     height: 100vh;
     max-height: 250px;
-    background: var(--dark-gray-2);
+    background: #1A1D1F;
 }
 footer div{
     width: 1366px;
@@ -62,22 +150,22 @@ footer div ul{
 footer div ul li:first-child{
     margin: 0 0 15px 0;
     font: normal 1.2em 'Roboto';
-    color: var(--white);
+    color: #FFFFFF;
 }
 footer div ul li{
     margin: 10px 0;
 }
 footer div ul li a{
     margin: 10px 0;
-    color: var(--gray);
+    color: #D3D9DC;
 }
 footer div ul li a:hover{
-    color: var(--white);
+    color: #FFFFFF;
 }
 footer:last-of-type{
     height: 86px;
-    background: var(--black);
-    color: var(--light-gray);
+    background: #000000;
+    color: #ECEFF1;
     font: normal 1em 'Roboto';
 }
 footer:last-of-type div{
