@@ -1,0 +1,23 @@
+                        {
+    "set1": {
+        "name":"Walking + Running Distance",
+        "value":"3,2",
+        "when":"Yesterday at 21:08"
+    },
+    "set2": {
+        "name":"Burned calories",
+        "value":"1779",
+        "when":"Yesterday at 21:08"
+    },
+    "set3": {
+        "name":"Steps",
+        "value":"3,2",
+        "when":"Yesterday at 21:08"
+    },
+    "set4": {
+        "name":"Sleep",
+        "value":"4h47m",
+        "when":"Yesterday at 06:02"
+    }
+}
+            

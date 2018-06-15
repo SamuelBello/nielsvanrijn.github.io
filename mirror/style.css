@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html, body{
+    background-color: black;
+}
+h3,h5,h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+section{
+    width: 100%;
+    height: 50vh;
+}
+section aside{
+    width: 50%;
+    height: 50vh;
+    float: left;
+    position: relative;
+}
+section aside div{
+    padding: 12%;
+    position: absolute;
+}
+section aside div.tl{
+    top: 0;
+    left: 0;
+}
+section aside div.tr{
+    top: 0;
+    right: 0;
+}
+section aside div.bl{
+    bottom: 0;
+    left: 0;
+}
+section aside div.br{
+    bottom: 0;
+    right: 0;
+}
+section aside div h3{
+    font-weight: lighter;
+    font-size: 30px;
+}
+section aside div h5{
+    font-weight: normal;
+    font-size: 50px;
+}
+section aside div h2{
+    font-weight: lighter;
+    font-size: 20px;
+}

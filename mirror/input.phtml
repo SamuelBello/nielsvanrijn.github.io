@@ -1,0 +1,19 @@
+<?
+$contents = file_get_contents('data.json');
+?>
+<form action="" name="form" method="post">
+    <textarea rows="22" cols="40" name="data">
+        <? echo $contents ?>
+    </textarea>
+    <input name="Submit" type="Submit">
+</form>
+
+<?
+if($_POST['Submit']){
+    echo "sent!";
+    $open = fopen("data.json","w");
+    $text = $_POST['data'];
+    fwrite($open, $text);
+    fclose($open);
+}
+?> 

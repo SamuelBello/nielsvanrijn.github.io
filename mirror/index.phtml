@@ -1,0 +1,53 @@
+<?php
+$str = file_get_contents('data.json');
+$json = json_decode($str, true);
+?>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Functional Design</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="media/favicon.png">
+    <noscript>You need javascript to load this page properly.</noscript>
+    <!--fonts-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
+    <!--style-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--js-->
+    <script defer type="text/javascript" src='js/main.js'></script>
+</head>
+<body>
+    <section>
+        <aside>
+            <div class="tl">
+                <h3><?=$json['set1']['name']?></h3>
+                <h5><?=$json['set1']['value']?></h5>
+                <h2><?=$json['set1']['when']?></h2>
+            </div>
+        </aside>
+        <aside>
+            <div class="tr">
+                <h3><?=$json['set2']['name']?></h3>
+                <h5><?=$json['set2']['value']?></h5>
+                <h2><?=$json['set2']['when']?></h2>
+            </div>
+        </aside>
+    </section>
+    <section>
+        <aside>
+            <div class="bl">
+                <h3><?=$json['set3']['name']?></h3>
+                <h5><?=$json['set3']['value']?></h5>
+                <h2><?=$json['set3']['when']?></h2>
+            </div>
+        </aside>
+        <aside>
+            <div class="br">
+                <h3><?=$json['set4']['name']?></h3>
+                <h5><?=$json['set4']['value']?></h5>
+                <h2><?=$json['set4']['when']?></h2>
+            </div>
+        </aside>
+    </section>
+</body>
+</html>
