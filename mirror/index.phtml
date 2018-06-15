@@ -5,16 +5,13 @@ $json = json_decode($str, true);
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
-    <title>Functional Design</title>
+    <title>Mirror</title>
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="media/favicon.png">
     <noscript>You need javascript to load this page properly.</noscript>
     <!--fonts-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
     <!--style-->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--js-->
-    <script defer type="text/javascript" src='js/main.js'></script>
 </head>
 <body>
     <section>
@@ -49,5 +46,23 @@ $json = json_decode($str, true);
             </div>
         </aside>
     </section>
+    <form action="" name="form" method="post" hidd>
+        <textarea type="hidden" rows="22" cols="40" name="data">
+            <? echo $contents ?>
+        </textarea>
+    </form>
+    <script>
+        setTimeout(() => {
+            window.location.reload(false);
+        }, 3000); 
+    </script>
 </body>
 </html>
+<?
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $open = fopen("data.json","w");
+    $text = $_POST['data'];
+    fwrite($open, $text);
+    fclose($open);
+}
+?> 

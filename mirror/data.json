@@ -1,4 +1,4 @@
-                        {
+ {
     "set1": {
         "name":"Walking + Running Distance",
         "value":"3,2",
@@ -20,4 +20,3 @@
         "when":"Yesterday at 06:02"
     }
 }
-            
