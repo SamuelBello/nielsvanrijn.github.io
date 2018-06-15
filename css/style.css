@@ -75,7 +75,8 @@ section div.item{
     -webkit-transition: .2s cubic-bezier(0,0,.2,1);
 }
 section div.item:hover{
-    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .10);
+    cursor: pointer;
+    box-shadow: 0 15px 20px 2px rgba(0, 0, 0, .10);
 }
 section div.item:hover h4{
     color: #4A8AFB;
@@ -96,12 +97,12 @@ section div.item h4::after{
     height: 2px;
     background: #F1F2F6;
 }
-section div.item > div{
+section div.item{
     transition: .2s cubic-bezier(0,0,.2,1);
     -webkit-transition: .2s cubic-bezier(0,0,.2,1);
 }
 /* =============== snippets =============== */
-section.snippets div.item > div{
+section.snippets div.item div{
     width: 280px;
     height: 424px;
     background-color: #4A8AFB;
@@ -111,11 +112,11 @@ section.snippets div.item > div{
     background-size: 150%;
     border-radius: 0 0 6px 6px;
 }
-section.snippets div.item:hover > div{
-    width: 300px;
+section.snippets div.item:hover{
+    transform: translateY(-10px);
 }
 /* =============== desktop =============== */
-section.desktop div.item > div{
+section.desktop div.item div{
     width: 394px;
     height: 290px;
     background-color: #4A8AFB;
@@ -125,8 +126,8 @@ section.desktop div.item > div{
     background-size: 150%;
     border-radius: 0 0 6px 6px;
 }
-section.desktop div.item:hover > div{
-    width: 400px;
+section.desktop div.item:hover{
+    transform: translateY(-10px);
 }
 /*====================================================================
 FOOTER
